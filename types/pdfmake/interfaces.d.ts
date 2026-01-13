@@ -853,6 +853,16 @@ export interface Style {
     noWrap?: boolean | undefined;
 
     /**
+     * Controls the line breaking behavior.
+     *
+     * - `normal` breaks lines at spaces
+     * - `break-all` breaks lines anywhere
+     *
+     * Defaults to `normal`.
+     */
+    wordBreak?: "normal" | "break-all" | undefined;
+
+    /**
      * Space between columns in `pt`.
      *
      * Only applies to {@link ContentColumns} elements.
