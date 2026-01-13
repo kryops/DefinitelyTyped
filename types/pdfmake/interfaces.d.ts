@@ -1093,13 +1093,13 @@ export interface ContentCanvas extends ContentBase, ForbidOtherElementProperties
  */
 export interface ContentSvg extends ContentBase, ContentLink, ForbidOtherElementProperties<"svg"> {
     /**
-     * Renders the given SVG content string as an image.
+     * Renders the given SVG element or content string as an image.
      *
      * For images other than SVG, use the `image` property instead.
      *
      * Simple vectors can also be rendered using the `canvas` property instead.
      */
-    svg: string;
+    svg: string | SVGElement;
 
     /**
      * Width of the image in `pt`.
