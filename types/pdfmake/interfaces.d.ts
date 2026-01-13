@@ -1678,6 +1678,15 @@ export interface OrderedListElementProperties {
      * Defaults to the list's {@link ContentOrderedList.type}.
      */
     listType?: OrderedListType | undefined;
+
+    /**
+     * Color of the list marker (i.e. number).
+     *
+     * Supports well-known color names like `blue` or hexadecimal color strings like `#ccffcc`.
+     *
+     * Defaults to the list's marker color.
+     */
+    markerColor?: string | undefined;
 }
 
 /**
@@ -1705,6 +1714,15 @@ export interface UnorderedListElementProperties {
      * Defaults to the list's {@link ContentUnorderedList.type}.
      */
     listType?: UnorderedListType | undefined;
+
+    /**
+     * Color of the list marker (i.e. bullet point).
+     *
+     * Supports well-known color names like `blue` or hexadecimal color strings like `#ccffcc`.
+     *
+     * Defaults to the list's marker color.
+     */
+    markerColor?: string | undefined;
 }
 
 /**
