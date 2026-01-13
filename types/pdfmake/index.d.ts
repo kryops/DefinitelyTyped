@@ -1,10 +1,39 @@
-/// <reference types="pdfkit" />
+import {
+    BufferOptions,
+    CustomTableLayout,
+    ProgressCallback,
+    TCreatedPdf,
+    TDocumentDefinitions,
+    TFontContainer,
+    TFontDictionary,
+    TVirtualFileSystem,
+} from "./interfaces";
 
-import { BufferOptions, TDocumentDefinitions, TFontDictionary } from "./interfaces";
+export type { TCreatedPdf };
 
-declare class PdfPrinter {
-    constructor(fontDescriptors: TFontDictionary);
-    createPdfKitDocument(docDefinition: TDocumentDefinitions, options?: BufferOptions): PDFKit.PDFDocument;
-}
+export function createPdf(
+    documentDefinitions: TDocumentDefinitions,
+    options?: BufferOptions,
+): TCreatedPdf;
 
-export = PdfPrinter;
+export function setProgressCallback(callback: ProgressCallback): void;
+
+export function addTableLayouts(tableLayouts: Record<string, CustomTableLayout>): void;
+export function setTableLayouts(tableLayouts: Record<string, CustomTableLayout>): void;
+export function clearTableLayouts(): void;
+
+export function addFonts(vfs: TFontDictionary): void;
+export function setFonts(vfs: TFontDictionary): void;
+export function clearFonts(): void;
+
+/**
+ * **Note:** Only supported in the browser.
+ */
+export function addVirtualFileSystem(vfs: TVirtualFileSystem): void;
+
+/**
+ * **Note:** Only supported in the browser.
+ */
+export function addFontContainer(fontContainer: TFontContainer): void;
+
+export as namespace pdfMake;
