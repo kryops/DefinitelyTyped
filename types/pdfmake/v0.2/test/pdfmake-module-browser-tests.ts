@@ -2,7 +2,7 @@ import pdfFonts = require("pdfmake/build/vfs_fonts");
 import pdfMake = require("pdfmake/build/pdfmake");
 import { BufferOptions, CustomTableLayout, TDocumentDefinitions, TFontDictionary } from "pdfmake/interfaces";
 
-pdfMake.vfs = pdfFonts.vfs;
+pdfMake.vfs = pdfFonts;
 
 const dd: TDocumentDefinitions = {
     content: [
