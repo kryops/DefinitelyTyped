@@ -2097,7 +2097,7 @@ export interface TDocumentDefinitions {
      *
      * @param currentNode - The current content node to check.
      * @param followingNodesOnPage - The content nodes defined after the current node on the same page.
-     * @param nodesOnNextPage - The content nodes on the page after the current node's page.
+     * @param nodesOnNextPage - The content nodes on the next page.
      * @param previousNodesOnPage - The content nodes defined before the current node on the same page.
      *
      * @returns whether to insert a page break before the current node.

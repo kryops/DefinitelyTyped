@@ -910,6 +910,8 @@ export type Content =
     | ContentSvg
     | ContentQr
     | ContentCanvas
+    // Even though only allowed on the document root level, sections can be nested e.g. in stacks,
+    // so we treat them like normal content elements
     | ContentSection
     | ContentAttachment;
 
@@ -2460,7 +2462,7 @@ export interface NodeQueries {
     getFollowingNodesOnPage: () => Node[];
 
     /**
-     * Returns the nodes on the page after the one the current node is on.
+     * Returns the nodes on the next page.
      */
     getNodesOnNextPage: () => Node[];
 
