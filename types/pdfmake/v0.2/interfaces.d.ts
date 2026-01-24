@@ -2139,7 +2139,7 @@ export interface TDocumentDefinitions {
     /**
      * Dictionary for reusable styles to be referenced by their key throughout the document.
      *
-     * To define styles that should apply by default, use {@link defaultStyles} instead.
+     * To define styles that should apply by default, use {@link defaultStyle} instead.
      */
     styles?: StyleDictionary | undefined;
 
